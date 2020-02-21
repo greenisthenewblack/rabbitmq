@@ -44,10 +44,10 @@ func Create(rbtc RabbitConnection) Rabbit {
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
 
-	rbt := Rabbit{connection: conn}
+	rbt := Rabbit{Connection: conn}
 	ch, err := conn.Channel()
 	failOnError(err, "Failed to open a channel")
-	rbt.channel = ch
+	rbt.Channel = ch
 	defer ch.Close()
 
 	return rbt
