@@ -24,17 +24,17 @@ func failOnError(err error, msg string) {
 
 //RabbitConnection - a configuration object for the connection to rabbit
 type RabbitConnection struct {
-	url  string
-	port string
-	user string
-	pass string
+	URL  string
+	Port string
+	User string
+	Pass string
 }
 
 //Rabbit - create rabbit object
 type Rabbit struct {
-	connection *amqp.Connection
-	channel    *amqp.Channel
-	queue      *amqp.Queue
+	Connection *amqp.Connection
+	Channel    *amqp.Channel
+	Queue      *amqp.Queue
 }
 
 //Create - create connection
