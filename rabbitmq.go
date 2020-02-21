@@ -40,7 +40,7 @@ type Rabbit struct {
 //Create - create connection
 func Create(rbtc RabbitConnection) Rabbit {
 	var connStr string
-	if rbtc.User!="" || rbtc.User==nil 
+	if rbtc.User!="" || rbtc.User!=nil 
 		connStr = fmt.Sprintf("amqp://%v:%v@%v:%v/", rbtc.User, rbtc.Pass, rbtc.URL, rbtc.Port)
 	}else{
 		connStr = fmt.Sprintf("%v:%v/", rbtc.URL, rbtc.Port)
